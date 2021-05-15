@@ -1,0 +1,35 @@
+.login{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: 1420px) {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .slide{
+    display: none;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    @media (max-width: 1420px) {
+      height: 100%;
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    h2{
+      font-size: 42px;
+      color: $grayscale-base;
+      margin-bottom: 10px;
+    }
+    p{
+      color: $grayscale-light;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+
