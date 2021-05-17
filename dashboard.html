@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Test</title>
+	<title>Dashboard</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="scss/styles.css">
@@ -11,9 +11,79 @@
 </head>
 
 <body>
-  <main>
-    <section class="menu">
-      <h2>kjkjkjjk</h2>
+  <main class="dashboard">
+    <aside class="menu bg">
+      <div class="menu__title">
+        <img src="./assets/svg/icon-menu.svg" alt="Menu Prendo" />
+        <!-- <img src="./assets/svg/icon-title.svg" alt="Menu Prendo" class="menu--icon-desktop"/> -->
+        <h2 class="menu--icon-desktop">Prendo</h2><br/>
+        <div>
+          <img src="./assets/svg/icon-title-mobile.svg" alt="Menu Prendo"  class="menu--icon-mobile"/>
+        </div>
+      </div>
+      <div class="menu__content">
+        <ul class="menu__list">
+          <li class="active">
+            <img src="assets/svg/icon-general.svg" alt="Vista General" />
+            <span class="hide">Vista general</span>
+          </li>
+          <li>
+            <img src="assets/svg/icon-courses.svg" alt="Programas y Cursos" />
+            <span class="hide">Programas y Cursos</span>
+          </li>
+          <li>
+            <img src="assets/svg/icon-design.svg" alt="Diseña tu sitio" />
+            <span class="hide">Diseña tu sitio</span>
+          </li>
+          <li>
+            <img src="assets/svg/icon-database.svg" alt="Estudiantes / Clientes" />
+            <span class="hide">Estudiantes / Clientes</span>
+          </li>
+          <li>
+            <img src="assets/svg/icon-marketing.svg" alt="Marketing y ventas" />
+            <span class="hide">Marketing y ventas</span>
+          </li>
+          <li>
+            <img src="assets/svg/ion-analytics.svg" alt="Analítica y reporte" />
+            <span class="hide">Analítica y reporte</span>
+          </li>
+        </ul>
+        <ul  class="menu__list">
+          <li>
+            <img src="assets/svg/icon-settings.svg" alt="Configuración" />
+            <span class="hide">Configuración</span>
+          </li>
+        </ul>
+      </div>
+    
+    </aside>
+    <section>
+      <header class="header">
+        <div class="header__search">
+          <input type="text" placeholder="Buscar ...">
+          <img src="./assets/svg/icon-search.svg" alt="Buscar" />
+        </div>
+        <div class="header__options">
+          <figure>
+            <img src="./assets/svg/icon-help.svg" alt="Icono de ayuda" />
+            <img src="./assets/svg/icon-notifications.svg" alt="Icono de notificaciones" />
+            <img src="./assets/svg/icon-message.svg" alt="Icono de mensajes" />
+          </figure>
+          <div class="header__profile">
+            <img src="./assets/img/profile.png" alt="Perfil" />
+            <div class="header__profile--name">
+              <p>Liliana Mora</p>
+              <img src="./assets/svg/icon-arrow-down.svg" alt="Ver perfil opciones">
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="dashboard__content">
+        <h2>hola</h2>
+      </section>
+
+
+
     </section>
   </main>
   <script src="js/main.js"></script>

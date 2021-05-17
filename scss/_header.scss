@@ -1,0 +1,58 @@
+.header{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: .875rem;
+  background-color: $white;
+  align-items: center;
+  @media (max-width: 1024px) {
+    grid-template-columns: 30% 70%;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 100%;
+  }
+  &__options{
+    @extend .flex;
+    justify-content: space-evenly;
+    figure{
+      img{
+        margin-right: 1.5rem
+      }
+    }
+    @media (max-width: 600px) {
+      justify-content: space-between;
+    }
+  }
+  &__profile{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    &--name{
+      @extend .flex;
+      margin-left: 1.25rem;
+      p{
+        margin-right: .5rem;
+      }
+    }
+  }
+  &__search{
+    position: relative;
+    input{
+      width: 100%;
+      border: none;
+      padding: .5rem 1rem .5rem 2.5rem;
+      box-sizing: border-box;
+      &:hover, &:active, &:focus{
+        outline: 0;
+      }
+      &::placeholder{
+        color: $grayscale-light;
+      }
+    }
+    img{
+      position: absolute;
+      left: 0;
+      top: 4px;
+      padding: 0 10px;
+    }
+  }
+}

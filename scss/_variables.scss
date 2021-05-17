@@ -7,6 +7,7 @@ $secondary: #6C5DD3;
 $grayscale-base: #222F3E;
 $grayscale-light: #8395A7;
 $grayscale-dark: #00000099;
+$grayscale-complementary:#f4f5f7;
 $white: #ffffff;
 $alert: #EE5253;
 
@@ -16,7 +17,7 @@ $alert: #EE5253;
 $breakpoints: (
    sm  : 412px,
    md  : 768px,
-   lg  : 992px,
+   lg  : 960px,
    xl  : 1140px, 
 );
 
