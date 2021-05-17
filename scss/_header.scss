@@ -4,6 +4,8 @@
   padding: .875rem;
   background-color: $white;
   align-items: center;
+  position: sticky;
+  top: 0;
   @media (max-width: 1024px) {
     grid-template-columns: 30% 70%;
   }

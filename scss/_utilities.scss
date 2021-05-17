@@ -21,6 +21,10 @@
   font-size: 1rem
 }
 
+.card{
+  background:$white;
+  border-radius: 1.25rem;
+}
 // Margins
 @include list-spacing('margin', 'all', '.m');
 @include list-spacing('margin', 'top', '.mt');

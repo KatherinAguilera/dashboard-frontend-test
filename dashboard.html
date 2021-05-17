@@ -7,7 +7,9 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="scss/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -55,7 +57,7 @@
           </li>
         </ul>
       </div>
-    
+
     </aside>
     <section>
       <header class="header">
@@ -79,13 +81,50 @@
         </div>
       </header>
       <section class="dashboard__content">
-        <h2>hola</h2>
+        <div class="dashboard__content__date">
+          <div class="dashboard__content--item">
+            <h3>¡Hola Liliana, así van tus programas!</h3>
+            <h2>Vista general</h2>
+          </div>
+          <div class="dashboard__content--course">
+            <figure>
+              <img src="./assets/svg/icon-date.svg" alt="Fecha del curso actual">
+              <div class="date">
+                <p>23</p>
+                <p>NOV</p>
+              </div>
+            </figure>
+            <div class="title">
+              <p>Curso de fotografía de alimentos</p>
+              <p>Calificar actividad del módulo 2</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="students">
+          <div class="students__data" id="students"></div>
+          <hr>
+          <div class="students__img">
+            <p>Tus Estudiantes</p>
+            <img src="./assets/img/students.png" alt="Estudiantes">
+          </div>
+        </div>
+
+        <div class="dashboard__value">
+          <div class="graphics">
+            <p>dfd</p>
+            <div id="date"></div>
+          </div>
+  
+          <div class="dashboard__items" id="items"></div>
+        </div>
+
       </section>
 
 
 
     </section>
   </main>
-  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
   </body>
 </html>

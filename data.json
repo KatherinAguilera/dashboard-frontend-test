@@ -1,0 +1,56 @@
+{
+  "students": [
+    {
+      "number": "08",
+      "name": "Cursos activos"
+    },
+    {
+      "number": "123",
+      "name": "Nuevas Oportunidades"
+    },
+    {
+      "number": "45",
+      "name": "Estudiantes registrados"
+    },
+    {
+      "number": "20",
+      "name": "Certificados entregados"
+    }
+  ],
+  "date": [
+    {
+      "month": "Octubre",
+      "value": "$629.75"
+    },
+    {
+      "month": "Noviembre",
+      "value": "$270.18"
+    },
+    {
+      "month": "Diciembre",
+      "value": "$485.35"
+    },
+    {
+      "month": "Enero",
+      "value": "$482.53"
+    }
+  ],
+  "items": [
+    {
+      "img": "./assets/img/courses.png",
+      "description": "Tus cursos"
+    },
+    {
+      "img": "./assets/img/custom-site.png",
+      "description": "Personaliza tus sitios"
+    },
+    {
+      "img": "./assets/img/campaign.png",
+      "description": "Crea una campaña"
+    },
+    {
+      "img": "./assets/img/customers.png",
+      "description": "Conoce tus clientes"
+    }
+  ]
+}

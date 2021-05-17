@@ -76,12 +76,3 @@ function changeImage() {
       image.src = "../assets/svg/icon-eyeoff.svg";
   }
 }
-
-
-var button = document.getElementById('menu-button');
-
-function toggle(){
-  elem.classList.toggle('bg');
-}
-
-button.addEventListener('click', toggle, false);

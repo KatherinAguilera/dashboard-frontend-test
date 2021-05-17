@@ -10,97 +10,142 @@
   }
   &__content{
     height: 100vh;
+    padding: 3rem;
+    @media (max-width: 600px) {
+      padding: 1rem;
+    }
+    &--item{
+      color:$grayscale-base;
+      h3{
+        font-size: 1.5rem;
+        font-weight: normal;
+      }
+      h2{
+        font-size: 42px;
+        font-weight: 700;
+        @media (max-width: 960px) {
+          margin-bottom: 1.5rem;
+        }
+        @media (max-width: 600px) {
+          font-size: 1.5rem;
+
+        }
+
+      }
+    }
+    &__date{
+      @extend .flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 1.875rem;
+    }
+    &--course{
+      @extend .flex;
+      figure{
+        position: relative;
+        .date{
+          position: absolute;
+          top: 16px;
+          left: .875rem;
+          font-weight: 700;
+          font-size: 1.5rem;
+          line-height: 1rem;
+          p:nth-child(1){
+            font-size: 1.25rem;
+          }
+          P:nth-child(2){
+            font-size: .6rem;
+          }
+        }
+      }
+      .title{
+        margin-left: .75rem;
+        p:nth-child(1){
+          color: $alert;
+          font-size: .875rem;
+          font-weight: bold;
+        }
+        p:nth-child(2){
+          color: $grayscale-base;
+          font-size: .75rem;
+        }
+      }
+
+    }
+  }
+  &__value{
+    @extend .flex;
   }
 }
 
-.menu{
-  padding: 2rem 1.25rem 1.25rem 1.5rem;
-  background-color: $white;
-  height: 90vh;
-  &__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80vh;
-
-  }
-  &__title{
+.students{
+  @extend .flex;
+  @extend .flex__jc-center;
+  @extend .card;
+  padding: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  &__data{
     @extend .flex;
-    margin-bottom: 2rem;
-    img{
-      margin-right: 1.5rem;
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
     }
-    @media (max-width: 960px) {
-      display: block;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      img{
-        margin-right: 0;
-      }
-      div{
-        margin-top: 1.5rem;
-      }
-    }
-  }
-  &--icon-desktop{
-    color: $grayscale-base;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  @media (max-width: 960px) {
-    padding: 1.25rem;
-    &--icon-desktop{
-      display: none;
-    }
-  }
-  @media (max-width: 650px) {
-    padding: 1rem .5rem;
-    &--icon-desktop{
-      display: none;
-    }
-  }
-  @media (min-width: 960px) {
-    &--icon-mobile{
-      display: none;
-    }
-  }
-  &__list{
-    li{
+    div{
+      width: 30%;
       @extend .flex;
-      cursor: pointer;
-      margin-bottom: 1.5rem;
-      font-size: .875rem;
+      flex-direction: column;
       color: $grayscale-base;
-      padding: .875rem;
-      border: 1px solid transparent;
-      &:hover{
-        border: 1px solid $secondary;
-        border-radius: .75rem;
-        transition: .4;
+      text-align: center;
+      @media (max-width: 600px) {
+        width: 50%;
       }
-      img{
-        margin-right: .5rem;
-      }
-    }
-    .active{
-      background-color: $secondary;
-      color: $white;
-      border-radius: .75rem;
-    }
-    @media (max-width: 960px) {
-      li{
-        padding: .75rem;
-        img{
-          margin-right: 0;
+      &:nth-child(1){
+        p:nth-child(2){
+          width: 40%;
         }
       }
-      span{
-        display: none;
+      p:nth-child(1){
+        font-size: 40px;
+        font-weight: 600;
+      }
+      p:nth-child(2){
+        font-size: .75rem;
       }
     }
-    .hide{
+  }
+  hr{
+    height: 6rem;
+    border-left: .5px solid #eeeeee;
+    margin: 2rem
+    }
+  &__img{
+    @extend .flex;
+    padding: .5rem;
+    p{
+      color: $grayscale-base;
+      font-size: .75rem;
+      margin-right: 1rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    hr{
+      display: none;
     }
   }
 
+}
 
+
+.dashboard__items{
+  div{
+    @extend .card;
+    @extend .flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    p{
+      color: $grayscale-base;
+      width: 50%;
+    }
+  }
 }

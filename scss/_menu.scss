@@ -1,0 +1,93 @@
+.menu{
+  padding: 2rem 1.25rem 1.25rem 1.5rem;
+  background-color: $white;
+  height: 90vh;
+  position: sticky;
+  top: 0;
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+
+  }
+  &__title{
+    @extend .flex;
+    margin-bottom: 2rem;
+    img{
+      margin-right: 1.5rem;
+    }
+    @media (max-width: 960px) {
+      display: block;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      img{
+        margin-right: 0;
+      }
+      div{
+        margin-top: 1.5rem;
+      }
+    }
+  }
+  &--icon-desktop{
+    color: $grayscale-base;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  @media (max-width: 960px) {
+    padding: 1.25rem;
+    &--icon-desktop{
+      display: none;
+    }
+  }
+  @media (max-width: 650px) {
+    padding: 1rem .5rem;
+    &--icon-desktop{
+      display: none;
+    }
+  }
+  @media (min-width: 960px) {
+    &--icon-mobile{
+      display: none;
+    }
+  }
+  &__list{
+    li{
+      @extend .flex;
+      cursor: pointer;
+      margin-bottom: 1.5rem;
+      font-size: .875rem;
+      color: $grayscale-base;
+      padding: .875rem;
+      border: 1px solid transparent;
+      &:hover{
+        border: 1px solid $secondary;
+        border-radius: .75rem;
+        transition: .4;
+      }
+      img{
+        margin-right: .5rem;
+      }
+    }
+    .active{
+      background-color: $secondary;
+      color: $white;
+      border-radius: .75rem;
+    }
+    @media (max-width: 960px) {
+      li{
+        padding: .75rem;
+        img{
+          margin-right: 0;
+        }
+      }
+      span{
+        display: none;
+      }
+    }
+    .hide{
+    }
+  }
+
+
+}
