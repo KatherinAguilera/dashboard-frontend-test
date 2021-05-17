@@ -1,0 +1,118 @@
+.input {
+  position: relative;
+  padding-top: 2rem;
+  .icon{
+    position: absolute;
+    top: 3.125rem;
+    right: .25rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  &__input {
+    width: 95%;
+    height: calc(1.8em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    color: $grayscale-dark;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 1px solid  $grayscale-light;
+    border-radius: .25rem;
+    position: relative;
+    &:focus {
+      border-color: $grayscale-light;
+      outline: 0;
+      & ~ [class*="error"] {
+        opacity: 1;
+      }
+    }
+    &:disabled, &[class*="disabled"] {
+      opacity: .5;
+      background: $grayscale-light;
+      ~ [class*="label"] {
+        opacity: .5;
+        color: $grayscale-light;
+      }
+    }
+    &[type=date], &[type=time] {
+        color: transparent;
+        &:focus, &.focused {
+          color: inherit;
+        }
+        &::-webkit-calendar-picker-indicator,
+        &::-webkit-clear-button  {
+          color: transparent;
+          background: none;
+          z-index: 1;
+        }
+        &::before {
+          font-family: 'ds';
+          position: absolute;
+          top: .3rem;
+          right: .5rem;
+          color: $grayscale-light;
+          font-size: 1.4rem;
+        }
+    }
+  }
+
+  &[class*="--"] {
+    [class*="__input"] {
+        &::placeholder {
+          opacity: 0;
+        }
+        &:focus {
+          &::placeholder{
+              opacity: 1;
+          }
+        }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    font-size: 1rem;
+    left: 0;
+    transform: translateY(-2rem);
+  }
+
+  &__error {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    bottom: -1.5rem;
+    font-size: .75rem;
+    color: $alert;
+    transition: all .1s linear;
+  }
+  &--outline {
+  [class*="__input"] {
+      &:focus, &:hover {
+        border-color:$grayscale-light;
+        box-shadow: inset 0px 0px 0 1px $grayscale-light;
+      }
+      &.focused {
+        & ~ [class*="label"] {
+            transform: translateY(-.7rem) scale(.80);
+            background-color: $white;
+            padding: 0 .3rem;
+            left: 5px;
+            top: 34px;
+        }
+      }
+    }
+    [class*="label"] {
+        position: absolute;
+        left: 0.7rem;
+        transform: translateY(.6rem);
+        transition: all .2s ease;
+        pointer-events: none;
+        top: 40px;
+        font-size: .875rem;
+        color: $grayscale-light;
+    }
+  }
+
+}

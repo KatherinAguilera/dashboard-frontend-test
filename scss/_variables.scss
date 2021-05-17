@@ -3,10 +3,12 @@
 // ========================================================================== 
 $primary: #354BD4;
 $primary-light: #2E86DE;
+$secondary: #6C5DD3;
 $grayscale-base: #222F3E;
 $grayscale-light: #8395A7;
-$grayscale-dark: #0F0F0F;
+$grayscale-dark: #00000099;
 $white: #ffffff;
+$alert: #EE5253;
 
 // ==========================================================================
 // Breakpoints
@@ -20,3 +22,18 @@ $breakpoints: (
 
 $border: 1px solid #E5E5E5;
 
+
+$sizes: (
+   none   : 0,
+   tiny   : .5rem,   // 8px
+   xsmall : .75rem,  // 12px
+   small  : .875rem, // 14px
+   base   : 1rem,    // 16px
+   thumb  : 1.125rem,// 18px
+   mid    : 1.25rem, // 20px
+   half   : 1.5rem,  // 24px
+   medium : 2rem,    // 32px
+   large  : 3rem,    // 48px
+   xlarge : 3.5rem,  // 56px
+   huge   : 4rem     // 64px
+);
