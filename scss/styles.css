@@ -1173,6 +1173,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .875rem;
   border-radius: 2rem;
   text-align: center;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.button__primary:hover {
+  background-color: #2E86DE;
+  -webkit-box-shadow: 1px 1px #354BD4, 2px 2px #354BD4, 3px 3px #354BD4;
+          box-shadow: 1px 1px #354BD4, 2px 2px #354BD4, 3px 3px #354BD4;
+  -webkit-transform: translateX(-3px);
+          transform: translateX(-3px);
 }
 
 .button__outline {
@@ -1331,11 +1341,21 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-evenly;
   margin-bottom: 1.5rem;
   padding: 1rem;
+  cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .dashboard__items div p {
   color: #222F3E;
   width: 50%;
+}
+
+.dashboard__items div:hover {
+  -webkit-animation: 1s girotresd 1;
+          animation: 1s girotresd 1;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  border: 1px solid #6C5DD3;
 }
 
 .header {
@@ -1472,6 +1492,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu__title img {
   margin-right: 1.5rem;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+
+.menu__title img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 @media (max-width: 960px) {
@@ -1525,13 +1553,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #222F3E;
   padding: .875rem;
   border: 1px solid transparent;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
 }
 
 .menu__list li:hover {
   border: 1px solid #6C5DD3;
   border-radius: .75rem;
-  -webkit-transition: .4;
-  transition: .4;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .menu__list li img {
@@ -1727,7 +1757,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .students__data div p:nth-child(2) {
-  font-size: .75rem;
+  font-size: .875rem;
 }
 
 .students hr {
@@ -1742,8 +1772,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .students__img p {
   color: #222F3E;
-  font-size: .75rem;
+  font-size: .875rem;
   margin-right: 1rem;
+}
+
+.students__img img {
+  -webkit-animation: infinite 2s linear mov;
+          animation: infinite 2s linear mov;
 }
 
 @media (max-width: 1024px) {
@@ -1780,5 +1815,97 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .875rem;
   line-height: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+@-webkit-keyframes mov {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  40% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  60% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  80% {
+    -webkit-transform: translateY(10);
+            transform: translateY(10);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes mov {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  40% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  60% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  80% {
+    -webkit-transform: translateY(10);
+            transform: translateY(10);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes girotresd {
+  40% {
+    -webkit-transform: perspective(1024px) translateZ(120px) rotateY(170deg);
+            transform: perspective(1024px) translateZ(120px) rotateY(170deg);
+  }
+  50% {
+    -webkit-transform: perspective(1024px) translateZ(120px) rotateY(190deg);
+            transform: perspective(1024px) translateZ(120px) rotateY(190deg);
+  }
+  80% {
+    -webkit-transform: perspective(1024px) translateZ(0px) rotateY(360deg);
+            transform: perspective(1024px) translateZ(0px) rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: perspective(1024px) rotateY(360deg);
+            transform: perspective(1024px) rotateY(360deg);
+  }
+}
+
+@keyframes girotresd {
+  40% {
+    -webkit-transform: perspective(1024px) translateZ(120px) rotateY(170deg);
+            transform: perspective(1024px) translateZ(120px) rotateY(170deg);
+  }
+  50% {
+    -webkit-transform: perspective(1024px) translateZ(120px) rotateY(190deg);
+            transform: perspective(1024px) translateZ(120px) rotateY(190deg);
+  }
+  80% {
+    -webkit-transform: perspective(1024px) translateZ(0px) rotateY(360deg);
+            transform: perspective(1024px) translateZ(0px) rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: perspective(1024px) rotateY(360deg);
+            transform: perspective(1024px) rotateY(360deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

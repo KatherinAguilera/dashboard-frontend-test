@@ -16,6 +16,11 @@
     margin-bottom: 2rem;
     img{
       margin-right: 1.5rem;
+      transition: all .5s linear;
+      cursor: pointer;
+      &:hover{
+        transform: rotate(360deg);
+      }
     }
     @media (max-width: 960px) {
       display: block;
@@ -60,10 +65,11 @@
       color: $grayscale-base;
       padding: .875rem;
       border: 1px solid transparent;
+      transition: all .5s linear;
       &:hover{
         border: 1px solid $secondary;
         border-radius: .75rem;
-        transition: .4;
+        transform: scale(1.2);
       }
       img{
         margin-right: .5rem;

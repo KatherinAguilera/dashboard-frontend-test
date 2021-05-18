@@ -102,9 +102,17 @@
     justify-content: space-evenly;
     margin-bottom: 1.5rem;
     padding: 1rem;
+    cursor: pointer;
+    border: 1px solid transparent;
     p{
       color: $grayscale-base;
       width: 50%;
     }
+    &:hover{
+      animation: 1s girotresd 1;
+      backface-visibility: visible;
+      border: 1px solid $secondary;
+    }
   }
 }
+

@@ -134,3 +134,5 @@ let myChart = new Chart(resultBar, {
         }
     }
 });
+
+

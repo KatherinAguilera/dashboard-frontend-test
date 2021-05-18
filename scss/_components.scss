@@ -33,7 +33,7 @@
         font-weight: 600;
       }
       p:nth-child(2){
-        font-size: .75rem;
+        font-size: .875rem;
       }
     }
   }
@@ -47,8 +47,11 @@
     padding: .5rem;
     p{
       color: $grayscale-base;
-      font-size: .75rem;
+      font-size: .875rem;
       margin-right: 1rem;
+    }
+    img{
+      animation: infinite 2s linear mov;
     }
   }
   @media (max-width: 1024px) {

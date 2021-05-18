@@ -12,6 +12,12 @@
     font-size: .875rem;
     border-radius: 2rem;
     text-align: center;
+    transition: all .3s linear;
+    &:hover{
+      background-color: $primary-light;
+      box-shadow: 1px 1px $primary, 2px 2px  $primary, 3px 3px  $primary,;
+      transform: translateX(-3px);
+    }
   }
   &__outline{
     color: $secondary;
