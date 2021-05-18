@@ -116,3 +116,28 @@
   }
 
 }
+
+
+.select{
+  position: relative;
+  &__value{
+    appearance: none;
+    background-color: $grayscale-complementary;
+    border: none;
+    border-radius: 10px;
+    color: $grayscale-light;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    outline: 0;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+  }
+  img{
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+
+}

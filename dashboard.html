@@ -10,6 +10,7 @@
   <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -112,10 +113,33 @@
 
         <div class="dashboard__value">
           <div class="graphics">
-            <p>dfd</p>
-            <div id="date"></div>
+            <div class="graphics__report">
+              <h2>Ganancias reportadas:</h2>
+              <div class="select">
+                <select class="select__value">
+                  <option value=6>Últimos 6 meses</option>
+                </select>
+                <img src="./assets/svg/icon-arrow-down.svg" alt="Select">
+              </div>
+            </div>
+
+            <div class="graphics__value">
+              <div class="center">
+                <h2>$ 5863</h2>
+                <p>Ganancias totales</p>
+              </div>
+              <div class="graphics__content">
+                <canvas id="graphic" width="300px"></canvas>
+              </div>
+            </div>
+
+            <div class="graphics__date" id="date"> </div>
+            <div class="flex flex__jc-center mb-half">
+              <div class="dotted dotted__active"></div>
+              <div class="dotted"></div>
+            </div>
+
           </div>
-  
           <div class="dashboard__items" id="items"></div>
         </div>
 

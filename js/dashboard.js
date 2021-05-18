@@ -41,3 +41,47 @@ function data(){
 });
 }
 data();
+
+// ==========================================================================
+// GRAPHICS
+// ==========================================================================
+let ctx = document.getElementById('graphic').getContext('2d');
+let myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Oct", "Nov", "Dic", "Ene", "Feb", "Mar"],
+        datasets: [
+            {
+                backgroundColor: "#7583DE",
+                data: [60, 21, 46, 36, 24, 38],
+            },
+            {
+                backgroundColor: "#AEDDEB",
+                data: [40, 15, 42, 29, 20, 50],
+            },
+        ]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            },
+        },
+        datalabels: {
+            display: false,
+        },
+        scales: {
+
+            y: {
+                grid: {
+                    display: false
+                }
+            },
+            x: {
+                grid: {
+                    display: false
+                }
+            }
+        }
+    }
+});

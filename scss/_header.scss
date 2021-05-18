@@ -6,6 +6,7 @@
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 2;
   @media (max-width: 1024px) {
     grid-template-columns: 30% 70%;
   }

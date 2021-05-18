@@ -1,3 +1,97 @@
 .graphics{
   @extend .card;
+  &__report{
+    @extend .flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 0 2rem;
+    flex-wrap: wrap;
+    h2{
+      color: $grayscale-base;
+      margin-bottom: .75rem;
+    }
+    @media (max-width: 412px) {
+      justify-content: center;
+    }
+  }
+  &__value{
+    display: flex;
+    padding: 2rem;
+    @media (max-width: 1024px) {
+      justify-content: center;
+    }
+    @media (max-width: 412px) {
+      flex-wrap: wrap;
+      padding: .75rem;
+    }
+
+    h2{
+      font-size: 42px;
+      color: $grayscale-base;
+      font-weight: 700;
+      @media (max-width: 1280px) {
+        font-size: 2rem;
+      }
+    }
+    p{
+      font-size: .75rem;
+      color: $grayscale-light;
+    }
+
+  }
+  &__content{
+    position: relative;
+    width: 56%;
+    height: 40%;
+    @media (max-width: 412px) {
+      width: 95%;
+      margin-top: 1rem;
+    }
+
+  }
+  &__date{
+    @extend .flex;
+    flex-wrap: wrap;
+    padding: 0 0 1.5rem 2rem;
+
+
+    div{
+      border-radius: 1.25rem;
+      padding: 1rem;
+      border: 1px solid #C8D6E5;
+      margin-right: .5rem;
+      p:nth-child(1){
+        color: $primary-light;
+        font-size: .75rem;
+        font-weight: bold;
+      }
+      p:nth-child(2){
+        color: $grayscale-base;
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 1380px) {
+      justify-content: center;
+      div{
+        margin-bottom: 1rem;
+        p:nth-child(2){
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .dotted{
+    background-color: #C8D6E5;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    margin-right: 1rem;
+    &__active{
+      background-color: #341F97;
+    }
+  }
+  @media (max-width: 412px) {
+    text-align: center;
+  }
 }
+
+

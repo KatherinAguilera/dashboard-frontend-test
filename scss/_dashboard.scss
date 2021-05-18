@@ -9,7 +9,6 @@
     grid-template-columns: 20% 80%;
   }
   &__content{
-    height: 100vh;
     padding: 3rem;
     @media (max-width: 600px) {
       padding: 1rem;
@@ -74,7 +73,18 @@
     }
   }
   &__value{
-    @extend .flex;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+    .center{
+      font-weight: bold;
+      margin-right: 2.5rem
+    }
+
   }
 }
 
