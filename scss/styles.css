@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
 }
 
-.flex, .login__form--social, .login__form--social figure, .dashboard__content__date, .dashboard__content--course, .students, .students__data, .students__data div, .students__img, .dashboard__items div, .header__options, .header__profile--name, .menu__title, .menu__list li, .graphics__report, .graphics__date {
+.flex, .login__form--social, .login__form--social figure, .dashboard__content__date, .dashboard__content--course, .dashboard__items div, .header__options, .header__profile--name, .menu__title, .menu__list li, .graphics__report, .graphics__date, .students, .students__data, .students__data div, .students__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
 }
 
-.card, .students, .dashboard__items div, .graphics {
+.card, .search__empty, .dashboard__items div, .graphics, .students {
   background: #ffffff;
   border-radius: 1.25rem;
 }
@@ -1152,10 +1152,17 @@ h1, h2, h3, h4, h5, h6 {
   right: 1.25rem;
 }
 
+.search__empty {
+  color: #2E86DE;
+  font-size: .75rem;
+  padding: .5rem;
+}
+
 .button {
   border: none;
   outline: 0;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 
 .button__primary {
@@ -1172,6 +1179,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #6C5DD3;
   font-size: 1rem;
   background: transparent;
+}
+
+.button__grayscale {
+  background: #ffffff;
+  color: #222F3E;
+  padding: 1.125rem;
+  font-weight: 700;
+  font-size: .875rem;
+  border-radius: 2rem;
+  text-align: center;
 }
 
 .dashboard {
@@ -1283,7 +1300,7 @@ h1, h2, h3, h4, h5, h6 {
   -ms-grid-columns: 3fr 1fr;
       grid-template-columns: 3fr 1fr;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 1024px) {
@@ -1298,68 +1315,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 2.5rem;
 }
 
-.students {
-  padding: 1rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 600px) {
-  .students__data {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-.students__data div {
-  width: 30%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #222F3E;
-  text-align: center;
-}
-
-@media (max-width: 600px) {
-  .students__data div {
-    width: 50%;
-  }
-}
-
-.students__data div:nth-child(1) p:nth-child(2) {
-  width: 40%;
-}
-
-.students__data div p:nth-child(1) {
-  font-size: 40px;
-  font-weight: 600;
-}
-
-.students__data div p:nth-child(2) {
-  font-size: .75rem;
-}
-
-.students hr {
-  height: 6rem;
-  border-left: .5px solid #eeeeee;
-  margin: 2rem;
-}
-
-.students__img {
-  padding: .5rem;
-}
-
-.students__img p {
-  color: #222F3E;
-  font-size: .75rem;
-  margin-right: 1rem;
-}
-
 @media (max-width: 1024px) {
-  .students hr {
-    display: none;
+  .dashboard__items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    gap: 1rem;
   }
 }
 
@@ -1723,5 +1685,100 @@ h1, h2, h3, h4, h5, h6 {
   .graphics {
     text-align: center;
   }
+}
+
+.students {
+  padding: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .students__data {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.students__data div {
+  width: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #222F3E;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .students__data div {
+    width: 50%;
+  }
+}
+
+.students__data div:nth-child(1) p:nth-child(2) {
+  width: 40%;
+}
+
+.students__data div p:nth-child(1) {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.students__data div p:nth-child(2) {
+  font-size: .75rem;
+}
+
+.students hr {
+  height: 6rem;
+  border-left: .5px solid #eeeeee;
+  margin: 2rem;
+}
+
+.students__img {
+  padding: .5rem;
+}
+
+.students__img p {
+  color: #222F3E;
+  font-size: .75rem;
+  margin-right: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .students hr {
+    display: none;
+  }
+}
+
+.create h2 {
+  font-size: 36px;
+  color: #4A545E;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.create__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.create__text h3 {
+  color: #222F3E;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.create__text p {
+  max-width: 363px;
+  color: #222F3E;
+  font-size: .875rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 /*# sourceMappingURL=styles.css.map */

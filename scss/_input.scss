@@ -141,3 +141,12 @@
   }
 
 }
+
+.search{
+  &__empty{
+    color: #2E86DE;
+    font-size: .75rem;
+    @extend .card;
+    padding: .5rem;
+  }
+}

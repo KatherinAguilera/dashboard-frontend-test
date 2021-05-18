@@ -20,21 +20,21 @@ function data(){
     }
 
     for(let i of datos["date"]){
-      console.log(i.month);
-      const row = document.createElement('div');
-      row.innerHTML += `
-          <p>${i.month}</p>
-          <p>${i.value}</p>
-      `;
-      date.appendChild(row);
-  }
+        console.log(i.month);
+        const row = document.createElement('div');
+        row.innerHTML += `
+            <p>${i.month}</p>
+            <p>${i.value}</p>
+        `;
+        date.appendChild(row);
+    }
 
-  for(let i of datos["items"]){
+    for(let i of datos["items"]){
     console.log(i.month);
     const row = document.createElement('div');
     row.innerHTML += `
-      <img src="${i.img}" alt = "Imagen Item" />
-      <p>${i.description}</p>
+        <img src="${i.img}" alt = "Imagen Item" />
+        <p>${i.description}</p>
     `;
     items.appendChild(row);
 }
@@ -43,10 +43,59 @@ function data(){
 data();
 
 // ==========================================================================
+// FILTER
+// ==========================================================================
+const form = document.querySelector('#form');
+const buttonSearch = document.querySelector('#buttonSearch');
+const results = document.querySelector('#results');
+
+const  earnings = [
+    {
+    "month": "Octubre",
+    "value": "$629.75"
+    },
+    {
+    "month": "Noviembre",
+    "value": "$270.18"
+    },
+    {
+    "month": "Diciembre",
+    "value": "$485.35"
+    },
+    {
+    "month": "Enero",
+    "value": "$482.53"
+    }
+]
+
+const filter = () =>{
+    results.innerHTML='';
+    const text = form.value.toLowerCase();
+    for (let gain of earnings) {
+        let showResult = gain.month.toLowerCase();
+        if (showResult.indexOf(text)  !== -1){
+            results.innerHTML +=  `
+            <div class="card">
+                <p>${gain.month}</p>
+                <p>${gain.value}</p>
+            </div>
+            `
+        }
+    }
+    if(results.innerHTML === ''){
+        results.innerHTML +=`
+        <p class="search__empty">Resultado de la busqueda: 0</p>
+        `
+    }
+}
+buttonSearch.addEventListener('click', filter);
+form.addEventListener('keyup', filter);
+
+// ==========================================================================
 // GRAPHICS
 // ==========================================================================
-let ctx = document.getElementById('graphic').getContext('2d');
-let myChart = new Chart(ctx, {
+let resultBar = document.getElementById('graphic').getContext('2d');
+let myChart = new Chart(resultBar, {
     type: 'bar',
     data: {
         labels: ["Oct", "Nov", "Dic", "Ene", "Feb", "Mar"],
