@@ -1138,6 +1138,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   color: #8395A7;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   height: 50px;
   outline: 0;
